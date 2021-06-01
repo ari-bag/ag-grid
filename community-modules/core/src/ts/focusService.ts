@@ -151,7 +151,7 @@ export class FocusService extends BeanStub {
         if (!this.focusedCellPosition) { return; }
 
         const col = this.focusedCellPosition.column;
-        const colFromColumnModel = this.columnModel.getGridColumn(col.getId());
+        const colFromColumnModel = this.columnModel.getGridColumn(col?.getId());
 
         if (col !== colFromColumnModel) {
             this.clearFocusedCell();
